@@ -1,0 +1,19 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Elate"
+license = "MIT"
+licenselink = "https://github.com/saey55/hugo-elate/blob/master/LICENSE.md"
+description = "Elate theme ported to Hugo by Pieter Saey"
+homepage = "http://siteforthistheme.com/"
+tags = ["Elate", "Hugo", "parallax"]
+features = ["", "", ""]
+min_version = 0.17
+
+[author]
+  name = "Pieter Saey"
+  homepage = "http://saey55.gitlab.io/pietercv"
+
+[original]
+  name = "Elate"
+  homepage = "https://freehtml5.co/elate-free-html5-bootstrap-template/"

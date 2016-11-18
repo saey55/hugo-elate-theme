@@ -1,0 +1,47 @@
+    <header role="banner" id="fh5co-header">
+        <div class="container">
+            <!-- <div class="row"> -->
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <!-- Mobile Toggle Menu Button -->
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <a class="navbar-brand" href="index.html">{{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}</a> 
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+
+                    {{ range .Site.Menus.prepend }}
+                        <li><a href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
+                    {{ end }}
+
+                    <li class="active"><a href="#" data-nav-section="home"><span>{{ with .Site.Params.navigation.home }}{{ . | markdownify }}{{ end }}</span></a></li>
+                    
+                    {{ if .Site.Params.work.enable }}
+                    <li><a href="#" data-nav-section="work"><span>{{ with .Site.Params.navigation.work }}{{ . | markdownify }}{{ end }}</span></a></li> 
+                    {{ end }}
+
+                    {{ if .Site.Params.testimonials.enable }}
+                    <li><a href="#" data-nav-section="testimonials"><span>{{ with .Site.Params.navigation.testimonials }}{{ . | markdownify }}{{ end }}</span></a></li> 
+                    {{ end }}
+
+                    {{ if .Site.Params.services.enable }}
+                    <li><a href="#" data-nav-section="services"><span>{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</span></a></li> 
+                    {{ end }}
+
+                    {{ if .Site.Params.about.enable }}
+                    <li><a href="#" data-nav-section="about"><span>{{ with .Site.Params.navigation.about }}{{ . | markdownify }}{{ end }}</span></a></li> 
+                    {{ end }}
+
+                    {{ if .Site.Params.contact.enable }}
+                    <li><a href="#" data-nav-section="contact"><span>{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</span></a></li> 
+                    {{ end }}
+
+                    {{ range .Site.Menus.postpend }}
+                        <li><a href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+        <!-- </div> -->
+    </div>
+</header>
