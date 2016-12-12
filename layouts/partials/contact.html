@@ -22,13 +22,14 @@
 
 				<div class="col-md-6 to-animate">
 					<h3>{{ with .Site.Params.contact.form }}{{ . | markdownify }}{{ end }}</h3>
+					<form method="post" action="//formspree.io/{{ with .Site.Params.email }}{{.}}{{ end }}">
 					<div class="form-group ">
 						<label for="name" class="sr-only">{{ with .Site.Params.contact.name }}{{ . | markdownify }}{{ end }}</label>
-						<input id="name" class="form-control" placeholder="Name" type="text">
+						<input id="name" class="form-control" name="name" placeholder="Name" type="text">
 					</div>
 					<div class="form-group ">
 						<label for="email" class="sr-only">{{ with .Site.Params.contact.email }}{{ . | markdownify }}{{ end }}</label>
-						<input id="email" class="form-control" placeholder="Email" type="email">
+						<input id="email" class="form-control" name="_replyto" placeholder="Email" type="email">
 					</div>
 					<div class="form-group ">
 						<label for="phone" class="sr-only">{{ with .Site.Params.contact.phone }}{{ . | markdownify }}{{ end }}</label>
@@ -36,12 +37,13 @@
 					</div>
 					<div class="form-group ">
 						<label for="message" class="sr-only">{{ with .Site.Params.contact.message }}{{ . | markdownify }}{{ end }}</label>
-						<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+						<textarea name="" id="message" cols="30" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
 					</div>
 					<div class="form-group ">
 						<input class="btn btn-primary btn-lg" value="{{ .Site.Params.contact.button | markdownify }}" type="submit">
 					</div>
 					</div>
+					</form>
 				</div>
 
 			</div>
