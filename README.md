@@ -27,7 +27,7 @@ Take a look inside the [`exampleSite`](//github.com/saey55/hugo-elate-theme/tree
 
 Since this page will be static, you can use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
 
-1. Enter your email address under 'email' in the [`config.toml`](//github.com/aerohub/hugo-identity-theme/blob/master/exampleSite/config.toml)
+1. Enter your email address under 'email' in the [`config.toml`](//github.com/saey55/hugo-elate-theme/blob/master/exampleSite/config.toml)
 2.  Enable form by setting `enable` to `true` in contact settings
 3. Upload the generated site to your server
 4. Send a dummy email yourself to confirm your account
