@@ -9,7 +9,7 @@ theme = "hugo-elate-theme"
   # Meta
   author = ""
   description = ""
-
+  email = ""
   # Navigation
   [params.navigation]
     brand = "Elate"

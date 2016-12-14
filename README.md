@@ -22,6 +22,17 @@ After installing the Elate Theme successfully it requires a just a few more step
 
 Take a look inside the [`exampleSite`](//github.com/saey55/hugo-elate-theme/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/saey55/hugo-elate-theme/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](//github.com/saey55/hugo-elate-theme/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
+### Make the contact form working
+
+Since this page will be static, you can use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
+
+1. Enter your email address under 'email' in the [`config.toml`](//github.com/saey55/hugo-elate-theme/blob/master/exampleSite/config.toml)
+2. Enable form by setting `enable` to `true` in contact settings
+3. Upload the generated site to your server
+4. Send a dummy email yourself to confirm your account
+5. Click the confirm link in the email from [formspree.io](//formspree.io/)
+6. You're done. Happy mailing!
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server. 
