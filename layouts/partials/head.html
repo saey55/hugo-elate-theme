@@ -69,6 +69,15 @@
     -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!--
+       custom css files can be configured in config.toml:
+       [params]
+          custom_css = ["css/foo.css", "css/bar.css"]
+     -->
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
