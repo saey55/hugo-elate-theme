@@ -38,13 +38,13 @@
 					<div class="form-group ">
 						{{ with .Site.Params.contact.phone }}
 						<label for="phone" class="sr-only">{{ . | markdownify }}</label>
-						<input id="phone" class="form-control" placeholder="{{ . }}" type="text">
+						<input id="phone" class="form-control" name="phone" placeholder="{{ . }}" type="text">
 						{{ end }}
 					</div>
 					<div class="form-group ">
 						{{ with .Site.Params.contact.message }}
 						<label for="message" class="sr-only">{{ . | markdownify }}</label>
-						<textarea name="" id="message" cols="30" rows="5" class="form-control" name="message" placeholder="{{ . }}"></textarea>
+						<textarea id="message" cols="30" rows="5" class="form-control" name="message" placeholder="{{ . }}"></textarea>
 						{{ end }}
 					</div>
 					<div class="form-group ">
