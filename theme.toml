@@ -3,7 +3,7 @@
 
 name = "Elate"
 license = "MIT"
-licenselink = "https://github.com/saey55/hugo-elate/blob/master/LICENSE.md"
+licenselink = "https://github.com/saey55/hugo-elate-theme/blob/master/LICENSE.md"
 description = "Elate theme ported to Hugo by Pieter Saey"
 homepage = "http://siteforthistheme.com/"
 tags = ["Elate", "Hugo", "parallax"]
