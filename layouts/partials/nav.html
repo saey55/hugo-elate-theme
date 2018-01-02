@@ -11,7 +11,7 @@
                   <ul class="nav navbar-nav navbar-right">
 
                     {{ range .Site.Menus.prepend }}
-                        <li><a href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
+                        <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
                     {{ end }}
 
                     <li class="active"><a href="#" data-nav-section="home"><span>{{ with .Site.Params.navigation.home }}{{ . | markdownify }}{{ end }}</span></a></li>
@@ -37,7 +37,7 @@
                     {{ end }}
 
                     {{ range .Site.Menus.postpend }}
-                        <li><a href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
+                        <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
                     {{ end }}
                 </ul>
             </div>
