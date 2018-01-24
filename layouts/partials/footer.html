@@ -4,15 +4,14 @@
 			<div class="">
 				<div class="col-md-12 text-center">
 					<p>{{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ end }}</p>
-					
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul class="social social-circle">
-						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-youtube"></i></a></li>
+					{{ range .Site.Params.footer.links }}
+						<li><a href="{{ with index . 1}}{{ . }}{{ end }}"><i class="{{ with index . 0}}{{ . }}{{ end }}"></i></a></li>
+					{{ end }}
 					</ul>
 				</div>
 			</div>
