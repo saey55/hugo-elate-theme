@@ -15,7 +15,11 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Google Map -->
 	{{ if .Site.Params.contact.map }}
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+		{{ if .Site.Params.googleMapsApiKey }}
+		<script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.googleMapsApiKey }}"></script>
+		{{ else }}
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		{{ end }}
 	<script src="js/google_map.js"></script>
 	{{ end }}
 	<!-- Main JavaScript -->
