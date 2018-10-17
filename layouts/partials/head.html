@@ -33,16 +33,18 @@
 
     <!-- Facebook and Twitter integration -->
     {{ if not .Site.Params.OpenGraph.hide }}
-    <meta name="og:site_name" content="{{ .Site.Title }}">
-    <meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-    <meta name="og:url" content="{{ .Permalink }}">
-    <meta name="og:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}">
     <meta name="twitter:title" content="{{ .Site.Title }}" />
     <meta name="twitter:url" content="{{ .Permalink }}" />
     <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}" />
     <meta name="twitter:card" content="" />
     {{ end }}
-<!--     
+<!-- 
+    <meta property="og:type" content="website" />
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
     <meta property="og:url" content=""/>
